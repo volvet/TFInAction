@@ -13,3 +13,6 @@ def get_available_cpus():
 def get_available_gpus():
     devices = device_lib.list_local_devices()
     return [x.name for x in devices if x.device_type == "GPU"]
+
+def print_tensor(tensor):
+    print tensor.eval()

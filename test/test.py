@@ -7,10 +7,14 @@ sys.path.append(BASE_DIR)
 
 from src import tfutility
 
+import linear_regression_test as lr
+
 def  queryDeviceTest():
-    print tfutility.get_available_devices()
-    print tfutility.get_available_cpus()
-    print tfutility.get_available_gpus()
+    tfutility.get_available_devices()
+    tfutility.get_available_cpus()
+    tfutility.get_available_gpus()
+    print "queryDeviceTest:    [OK]"
 
 if __name__ == "__main__":
     queryDeviceTest()
+    lr.linear_regression_test()
