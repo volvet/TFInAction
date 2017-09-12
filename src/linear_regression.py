@@ -4,7 +4,7 @@ import tfutility
 
 class LinearRegression:
     def __init__(self, shape, lamda=0.0000001):
-        self.w = tf.Variable(tf.zeros(shape), name="weights")
+        self.w = tf.Variable(tf.random_normal(shape,stddev=1), name="weights")
         self.b = tf.Variable(0., name="bias")
         self.lamda = lamda
         self.sess = tf.Session()
