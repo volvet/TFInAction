@@ -52,10 +52,10 @@ class LinearRegression2:
         return
 
     def run(self, X, Y, batch_size, steps):
-        input_fn = tf.estimator.inputs.numpy_input_fn({"x": X}, Y, batch_size=4, num_epochs=1000, shuffle=True)
+        input_fn = tf.estimator.inputs.numpy_input_fn({"x": X}, Y, batch_size=batch_size, num_epochs=1000, shuffle=True)
         self.estimator.train(input_fn=input_fn, steps=steps)
         return
 
     def evaluate(self, X, Y, batch_size):
-        input_fn = tf.estimator.inputs.numpy_input_fn({"x": X}, Y, batch_size=4, num_epochs=1000, shuffle=False)
+        input_fn = tf.estimator.inputs.numpy_input_fn({"x": X}, Y, batch_size=batch_size, num_epochs=1000, shuffle=False)
         return self.estimator.evaluate(input_fn=input_fn)
