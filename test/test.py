@@ -16,10 +16,11 @@ def  queryDeviceTest():
     tfutility.get_available_devices()
     tfutility.get_available_cpus()
     tfutility.get_available_gpus()
-    print " [OK] queryDeviceTest"
+    print "  [OK]"
 
 if __name__ == "__main__":
-    queryDeviceTest()
-    lr.linear_regression_test()
-    lr.linear_regression2_test()
+    #queryDeviceTest()
+    #lr.linear_regression_test()
+    #lr.linear_regression2_test()
+    lr.linear_regression3_test()
 
