@@ -49,3 +49,6 @@ with tf.Session() as sess:
             batch_x, batch_y = mnist.train.next_batch(batch_size)
             sess.run([train_step], feed_dict={X: batch_x, Y_: batch_y})
         print("Epoch: ", epoch, ", Accuracy: ", accuracy.eval(feed_dict={X: mnist.test.images, Y_: mnist.test.labels}))
+    saver = tf.train.Saver()
+    save_path = saver.save(sess, "../model/mnist_simple_softmax.ckpt")
+    print('done')
