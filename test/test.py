@@ -10,6 +10,7 @@ sys.path.append(BASE_DIR)
 from src import tfutility
 
 import linear_regression_test as lr
+import kmeans_test as km
 
 def  queryDeviceTest():
     print "[Run] queryDeviceTest"
@@ -22,5 +23,6 @@ if __name__ == "__main__":
     #queryDeviceTest()
     #lr.linear_regression_test()
     #lr.linear_regression2_test()
-    lr.linear_regression3_test()
+    #lr.linear_regression3_test()
+    km.kmeans_test()
 

@@ -88,4 +88,9 @@ def linear_regression3_test():
         sess.run(train)
         if step % 100 == 0:
             print step, sess.run(w), sess.run(b)
+
+    plt.plot(x_data, y_data, 'ro')
+    plt.plot(x_data, sess.run(w)*x_data + sess.run(b))
+    plt.legend()
+    plt.show()
     return
