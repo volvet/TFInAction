@@ -6,9 +6,7 @@ Created on Fri Mar 30 10:13:52 2018
 @author: volvetzhang
 """
 
-import matplotlib.pyplot as plt
 import tensorflow as tf
-import numpy as np
 from tensorflow.examples.tutorials.mnist import input_data
 #
 #logs_path = 'log_mnist_softmax'
