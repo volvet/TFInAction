@@ -209,6 +209,11 @@ def main():
             if step % 10 == 0:
                 train_loss = sess.run([loss_val], feed_dict=feed_dict)
                 print("Training Loss: ", train_loss)
+            if step % 100 == 0:
+                validation_loss = sess.run([loss_val], feed_dict={
+                        input_dataset: validation_images, input_labels: validation_labels})
+                print("Validation Loss: ", validation_loss)
+    
     
     return
 
